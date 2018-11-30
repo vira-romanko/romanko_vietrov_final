@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rush Creek Wines</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+	<section id="topBar"><h2 class="hidden"> Top Bar</h2>  </section><!--end topBar-->
+	<div id="siteContainer">
+    <h1 class="hidden">Rush Creek Wines</h1>
+    	<header id="mainHeader">
+        
+        	<div id="logo">
+                <img src="assets/logo.svg" alt="Rush Creek Wines logo" width="136" height="148" >
+            </div><!--end logo-->
+               <nav id="mainNav">
+                <h2 class="hidden">Main Navigation</h2>
+            <ul class="list-horizontal">
+               <li><a href="index.html">HOME</a></li>
+               <li><a href="ourwines.html">OUR WINES</a></li>
+               <li><a href="#">VISIT US</a></li>
+               <li><a href="purchase.html">PURCHASE</a></li>
+            </ul>
+            <p> AYLMER,ON</p>
+             
+
+        </nav><!--end mainNav-->
+          <!--  -->
+        </header><!--end mainHeader-->
+        <section id="mainContact">
+          <h2>Purchase online</h2>
+
+          <h2 class="hidden"> Custom labels</h2>
+        	<div id="content3">
+            <p><span>Custom labels are available</span></p>
+            </div><!--end content3-->
+            <form id="contactForm" action="form.php" method="post">
+
+        	<div id="content4">
+            <h2 class="hidden">Contact form</h2>
+
+            
+
+            <label for="name">Full name (Required)</label>
+            <input  type="text" required id="name" name="fullName" size="30" placeholder="Name">
+
+
+            <label for="email">Email</label>
+            <input type="email" required id="email" size="30" placeholder="example@gmail.com">
+
+
+            <label for="phone">Telephone/Cell(Required)</label>
+            <input type="tel" required id="phone" size="30">
+
+
+            <label for="comments">Details</label>
+            <textarea name="comments" id="comments" required cols="50" rows="8"></textarea>
+           
+            <section id="subBut">
+              <h3 class="hidden"> Submission Button</h3>
+              <input id="submit" type="submit" value="Submit"></section>
+            </div><!--end content4-->
+          </form>
+
+        </section><!--mainContact-->
+
+        <footer id="mainFooter">
+            <div id="footerNav">
+                  <div class="socialMedia">
+                      <h2 class="hidden">Social Media</h2>
+                            <ul id="iconNav">
+                            <li id="facebook">
+                                <a href="http://www.facebook.com">
+                                <img src="images/facebook.svg" alt="facebook">
+                                </a>
+                            </li>
+                            <li id="twitter">
+                               <a href="http://www.twitter.com">
+                               <img src="images/twitter.svg" alt="twitter">
+                               </a>
+                            </li>
+                            <li id="instagram">
+                               <a href="http://www.instagram.com">
+                               <img src="images/instagram.svg" alt="instagram">
+                               </a>
+                            </li>
+                             </ul>
+                   </div>    
+            <nav>
+                <h2 class="hidden"> Footer Navigation</h2>
+               <ul class="list-horizontal">
+               <li><a href="index.html">HOME</a></li>
+               <li><a href="ourwines.html">OUR WINES</a></li>
+               <li><a href="#">VISIT US</a></li>
+               <li><a href="purchase.html">PURCHASE</a></li>
+               </ul>
+            </nav>
+            </div><!--end FooterNav-->
+            
+            <div id="copyRight">
+                <h2 class="hidden">Copyright</h2>
+                <p>Rush Creek Wines<span>Copyright ©2018</span><span>All Rights Reserved.</span></p>
+            </div><!--end Copyright-->
+        </footer><!--end mainFooter-->
+    </div><!--end siteContainer-->
+<script src="js/main.js"></script>    
+</body>
+</html>
