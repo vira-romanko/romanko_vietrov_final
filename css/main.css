@@ -1,0 +1,683 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule, this is only for demo purposes to make the boxes black with white text
+The line height on the <p> tag gives each box a height value*/
+
+
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: font-family:  "Bodoni 72", Book, serif;
+	font-size: 12px;
+	color: #000;
+	background-color: #ededed;
+	background-image:url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234f324f' fill-opacity='0.08'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none; 	
+}
+
+a:hover, a:active 
+{ 
+	text-decoration:none; 
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*section is block level and no width specidied therefore stretches full screen*/
+#topBar
+{
+	background-color: #4f324f;
+	height: 20px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer 
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 0.5px;
+	background-color: #fff;
+}
+
+/*This is a flex container*/
+#mainHeader
+{
+	margin-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+	border-bottom: solid 1px #DDD;
+}
+
+
+/*This is a flex item*/
+#logo
+{
+	width: 136px;
+	padding-top: 3px;
+}
+
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+
+
+#mainNav 
+{
+
+	margin-left: auto;
+	width: 500px;
+	height: 100px;
+	/*margin-top:43;*/
+	display: flex;
+	flex-direction: column;
+	/*justify-content:space-evenly; */
+	justify-content: flex-end;
+}
+
+#mainNav p
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin-left: auto;
+	margin-right: 65px;
+
+}
+
+#mainNav p
+{
+	font-size: 18px;
+	color: #4f324f;
+}
+
+#mainNav ul
+{
+  padding:0;
+}
+
+
+
+#mainNav ul li
+{
+	font-family:  "Bodoni 72", Book, serif;
+	font-size: 24px;
+	/*display: inline;*/
+	cursor: pointer;
+	
+}
+
+
+.list-horizontal li
+{
+	display:inline-block;
+}
+.list-horizontal li:before 
+{
+	content: '\2022\00a0';
+	color:#4f324f;
+	font-size:23px;
+}
+.list-horizontal li:first-child:before
+{
+	content: '';
+}
+
+#mainNav ul li a
+{
+	color: #c81615;
+/*	padding: 5px;*/
+}
+
+#mainNav ul li a:hover
+{
+	color:#4f324f; 
+}
+
+
+ #mainFooter 
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 20px;
+	background-color: #b3a6b3;
+	display:flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+  	 box-shadow: 5px 5px 3px #aaaaaa;
+
+}
+
+#footerNav 
+{
+	width: 500px;
+	height: 100px;
+	/*background-color: #000;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+
+#footerNav ul
+{
+  padding:0;
+}
+
+
+
+#footerNav ul li
+{
+	font-family:  "Bodoni 72", Book, serif;
+	font-size: 23px;
+	/*display: inline;*/
+	cursor: pointer;
+	
+}
+
+
+.list-horizontal li
+{
+	display:inline-block;
+}
+.list-horizontal li:before 
+{
+	content: '\2022\00a0';
+	color:#4f324f;
+	font-size:12px;
+}
+.list-horizontal li:first-child:before
+{
+	content: '';
+}
+
+#footerNav ul li a
+{
+	color: #000;
+/*	padding: 5px;*/
+}
+
+#footerNav ul li a:hover
+{
+	color:#c81615; 
+}
+
+#copyRight 
+{
+	margin-left: auto;
+	width: 160px;
+	height: 90px;
+	/*margin-right: 130px;*/
+	display: flex;
+
+	flex-direction: column;
+	justify-content: flex-end;
+
+
+}
+#copyRight p
+{
+	font-size: 18px;
+	color: #000;
+	line-height: 1.6;
+
+	
+}
+
+#copyRight p span
+{
+	display: block;
+}
+
+#copyRight p span::before 
+{
+  content: attr(data-text);
+
+}
+
+.socialMedia
+{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+    height: 45px;
+    /*background-color: #fff;*/
+    padding-right: 350px;
+}
+
+
+#iconNav img
+{
+  width: 45px;
+  height: 45px;
+
+  
+}
+
+#iconNav
+{
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+#iconNav li
+{
+  display: inline;
+  margin-right:3px;
+}
+
+
+#iconNav li a:hover
+{
+  color:#573a57;
+  opacity: 0.7;
+}
+
+
+/*Page 2 - Notice we are using one style sheet for all of the pages*/
+
+#contentCon {
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+/*#contentCon p 
+{
+	line-height: 630px;
+}*/
+
+#content1 
+{
+	width: 437px;
+	height: 631px;
+	background: url(../images/main_pic_home.jpg) no-repeat bottom;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+#content1 p
+{
+  width: 437px;
+  height: 136px;
+  display: inline-flex;
+  background-color:#573a57;
+  opacity: 0.5;
+  
+  
+  
+  flex-direction: column;
+  justify-content: center;
+
+}
+#content1 p
+{
+  font-size: 36px;
+  color: #fff;
+  
+}
+#content1 p span
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 75px;
+}
+
+
+
+#content2 
+{
+	margin-left:  auto;
+	width: 440px;
+	height: 188px;
+	
+
+}
+#content2 h1
+{
+	font-weight: bold;
+	font-size: 36px;
+	color: #573a57;
+	text-align: center;
+	line-height: 1.6;
+
+
+}
+#content2 h1
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#content2 h1 span
+{
+	display: block;
+}
+
+#content2 h1 span::before 
+{
+  content: attr(data-text);
+
+}
+
+#content2 p
+{
+	font-weight: bold;
+	font-size: 29px;
+	color: #573a57;
+	line-height: 1.5;
+}
+#content2 a
+{
+	width: 313px;
+	height:84px;
+	background-color: #b3a6b3;
+	margin-top: 58px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: center;
+	margin-left: 45px;
+	box-shadow: 5px 5px;
+	
+
+}
+#content2 a
+{
+	font-weight: bold;
+	font-size: 36px;
+	color: #573a57;
+	
+}
+#content2 a:hover
+{
+	color: #fff;
+}
+
+
+/*OUR WINES*/
+
+#promo 
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+/*#promo p 
+{
+	line-height: 250px;
+}*/
+
+/*#promoText 
+{
+	width: 600px;
+}*/
+
+
+
+/*#promoText actually holds image and #promoImage holds text(in case of confusion)*/
+#promoText {
+  position:  relative;
+  width: 600px;
+}
+
+#img_description {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 0px;
+  right: 0px;
+  padding-top: 25px;
+  background-color:#757372;
+
+  visibility: hidden;
+  opacity: 1;
+
+  /* transition effect. not necessary 
+  /*transition: opacity .2s, visibility .2s;*/
+}
+
+#promoText  a:hover #img_description 
+{
+  visibility: visible;
+  opacity: 0.5;
+}
+
+  
+
+#promoText h2
+{
+	font-size: 40.23px;
+	font-weight: bold;
+	color: #1f0d0e;
+	text-align: center;
+
+
+}
+#promoText h2:hover #img_description
+{
+	visibility: visible;
+	opacity:1;
+	
+}
+
+
+
+#promoText a:hover img
+
+{
+  
+  filter:brightness(50%);
+
+
+}
+
+#promoImage 
+{
+	margin-left: auto;
+	width: 280px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #573a57;
+	line-height:1.7;
+	margin-top: 20px;
+}
+
+#promoImage p span
+{
+	display: block;
+}
+#promoImage p span: :before
+{
+	content: attr(data-text);
+
+
+}
+
+#productInfo 
+{
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+/*Get rid of this, here just to give different height to productInfo*/
+
+/*#productInfo 
+{
+	
+	width: 200px;
+	
+}*/
+  
+
+    
+
+
+.productDesc img
+{
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	
+	
+
+	/*background-color: #000;*/
+	
+	
+
+}
+
+
+
+
+.productDesc a 
+{
+	height: 50px;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+
+
+   
+    background-color:#573a57;
+    margin-top: 40px;
+    padding-bottom: 0px;
+  
+    opacity: 1;
+
+}
+
+.productDesc a, h3
+
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	color:#fff;
+
+}
+
+
+.productDesc a:hover
+{
+	filter: brightness(50%);
+}
+
+
+
+
+
+
+/*Page 3
+
+/*#productImages 
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+}
+
+/*Get rid of this, here just to give different height
+/*#productImages p
+{
+	line-height: 250px;
+}
+
+.productImg 
+{
+	width: 280px;
+}
+
+
+#contentAreaBig
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+Get rid of this, here just to give different height
+#contentAreaBig p 
+{
+	line-height: 300px;
+}
+
+#promoImageBig
+{
+	width: 920px;
+}
+*/
+
+/*Page 4*/
+
+/*.productDescLargeLeft 
+{
+	width: 410px;
+}
+
+.productDescLargeRight 
+{
+	width: 410px;
+}
+*/
